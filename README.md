@@ -25,16 +25,24 @@ After merging the data, one of the critical steps was to standardize the phone n
 
 The Postgres database originally provisioned could not connect due to a private network. I will talk more about that via the email correspondence. However, I had to set it up locally on my system and the snapshots are in the zip file names "Database setup and update.zip"
 
+**Update to  Database after successful connection:**
+After successfully connecting to the provided database instance, I created the "lead_data" table and imported the lead_data_cleaned.csv file. Subsequently, I identified a record with the "firma" name "t" where the "street", "plz", and "city" were missing. I updated these fields, as reflected in the current database record compared to the data in the CSV file.
+
+UPDATE lead_data
+SET street = 'Dortmund Street 100',
+    plz = '44227',
+    city = 'Dortmund'
+WHERE firma = 't' AND local_phone_number = '3601408922300';
 
 
 **Exploratory Analysis with Power BI**
 
 Finally, I explored the cleaned dataset using Power BI and visualized the data to see interesting insights. Some quick insights from the exploratory analysis:
 ** Total number of leads is about 4106 
-** DE accounts for 90% of the leads with a total of 3708 leads. This is followed by AT 6% (a total of 253 leads) and CH 4% (45 leads)
+** DE accounts for 90% of the leads with 3708 leads. This is followed by AT 6% (a total of 253 leads) and CH 4% (145 leads)
 ** The leads covered 1872 cities and 2666 postal code areas
-** From the city analysis, German cities, Berlin has the highest leads (162) followed by Hamburg and Munich 106 and 81 respectively.
-The Poer BI .pbix file is also attached (innocent_exam).pbix
+** In the city analysis of German cities, Berlin has the highest lead (162), followed by Hamburg and Munich, 106 and 81, respectively.
+The Power BI .pbix file is also attached (innocent_exam).pbix
 
 If you need any clarification on any of the sections, kindly reach out to me.
 
