@@ -17,7 +17,7 @@ df_combined = pd.concat([df1, df2, df3, df4], ignore_index=True)
 
 **Data Cleaning: Phone Numbers**
 
-After merging the data, one of the critical steps was to standardize the phone number format. The country_code column had some inconsistencies, such as missing values or incorrect formats, and phone numbers without the country dialing code. This section took the bulk of the time. I used regex and other pandas functions to cleaned the data, ensure that each country has the correct country_code and remove unwanted strings from the phone numbers. All the codes can be found in the "Assignment-DA.ipynb" file. There were two countries with a single lead (Italy and the UK), I assumed the focus was on the three main countries, hence I discarded their records.
+After merging the data, one of the critical steps was to standardize the phone number format. The country_code column had some inconsistencies, such as missing values or incorrect formats, and phone numbers without the country dialing code. This section took the bulk of the time. I used regex and other pandas functions to cleaned the data, ensure that each country has the correct country_code and remove unwanted strings from the phone numbers. All the codes can be found in the "Assignment-DA.ipynb" file. There were two countries with a single lead (Italy and the UK), I assumed the focus was on the DACH region comprising DE, AT and CH, hence I discarded the two other countries not in the DACH region.
 
 
 
