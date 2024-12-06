@@ -1,5 +1,5 @@
-# Innocent_DataAnalyst_Assessment
-task on lead data
+# Innocent_DataAnalyst_Project
+In this project, I used a lead dataset on Google Sheets, integrated it into Python via API, cleaned it on Python, then downloaded the cleaned dataset to PostgreSQL, updated some missing fields and then finally visualised the data using Power BI.
 
 
 **Google Sheets API Setup and Integration to Pandas**
