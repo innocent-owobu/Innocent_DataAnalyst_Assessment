@@ -17,7 +17,7 @@ df_combined = pd.concat([df1, df2, df3, df4], ignore_index=True)
 
 **3. Data Cleaning: Phone Numbers**
 
-After merging the data, one of the critical steps was to clean and standardize the phone number format. The country_code column had some inconsistencies, such as missing country code or incorrect formats. This section took the bulk of the time. I used regex and other pandas functions to clean the data, ensure that each country has the correct country_code and remove unwanted strings from the phone numbers. All the codes can be found in the attached "Assignment-DA.ipynb" file. There were two countries with a single lead (Italy and the UK), but since our focus was on the DACH region comprising DE, AT and CH, I discarded the Italy and UK countries.
+After merging the data, one of the critical steps was to clean and standardize the phone number format. The country_code column had some inconsistencies, such as missing country codes or incorrect formats. This section took the bulk of the time. I used regex and other pandas functions to clean the data, ensure that each country has the correct country_code and remove unwanted strings from the phone numbers. All the codes can be found in the attached "Assignment-DA.ipynb" file. There were two countries with a single lead (Italy and the UK), but since our focus was on the DACH region comprising DE, AT and CH, I discarded the Italy and UK countries.
 
 
 
@@ -32,7 +32,7 @@ SET street = 'Dortmund Street 100',
 WHERE firma = 't' AND local_phone_number = '3601408922300';
 
 
-**Exploratory Analysis with Power BI**
+**5. Exploratory Analysis with Power BI**
 
 Finally, I explored the cleaned dataset using Power BI and visualized the data to see interesting insights. Some quick insights from the exploratory analysis:
 ** Total number of leads - 4106 
